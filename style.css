@@ -1,0 +1,79 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Manjari', sans-serif;
+    font-size:.625%;
+}
+
+header {
+height:100vh;
+background-image:linear-gradient(to bottom right,rgb(0, 0, 255,0.4),rgb(75, 0, 130,0.4)),url(/assets/header-background.jpg);
+background-size:cover;
+background-position:top;
+position:relative;
+clip-path:polygon(0 0, 100% 0, 100% 95%, 0 100%);
+}
+
+.headline {
+    position:absolute;
+    top:90%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    animation: 1s header-appear ease-out;
+}
+
+@keyframes header-appear {
+    0% {
+        opacity:0;
+        top:80%;
+    }
+
+    100% {
+        opacity:100%;
+        top:90%;
+    }
+}
+
+.headline--frost__relative-cover {
+    background-color:rgb(255, 255, 255,.4);
+    height:100%;
+    width:100%;
+    position:absolute;
+    z-index:-1;
+}
+
+.headline-text {
+    animation:2s text-appear ease-out;
+}
+
+@keyframes text-appear {
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.header__main {
+    z-index:1;
+    display:block;
+    font-size:2rem;
+    white-space:nowrap;
+    letter-spacing:.07rem;
+}
+
+.header__sub {
+    text-align:center;
+    display:block;
+    font-size:1.5rem;
+    letter-spacing:1.5px;
+    white-space:nowrap;
+}
